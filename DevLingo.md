@@ -533,39 +533,6 @@ Neste projeto o aluno pratica:
 
 ---
 
-# 17. Possíveis Expansões
-
-O projeto pode evoluir para:
-
-* Ranking salvo em JSON
-* Níveis de dificuldade
-* Sistema de login
-* Banco de dados
-* Interface gráfica
-* API REST
-* Versão web
-
----
-
-# 18. Conclusão
-
-DevLingo Arena é um projeto que une:
-
-* Programação
-* Arquitetura
-* Organização
-* Inglês
-* Lógica
-
-Ele pode ser usado como:
-
-* Projeto avaliativo
-* Projeto final de módulo
-* Introdução a Node.js
-* Exercício de modularização
-
-O mais importante não é apenas fazer funcionar.
-É entender a estrutura e o porquê de cada decisão.
 
 
 
