@@ -359,30 +359,40 @@ module.exports = completeSentence;
 const readline = require('readline-sync');
 const gameState = require('../gameState');
 
-function sentenceBuilder() {
+function sentenceBuilder(){
+    
+    
+    const challenge = [
+        {
+            words: ["developer", "is", "He", "a"],
+            answer: "He is a developer"
+        },
+        {
+            words: ["developer", "is", "He", "a"],
+            answer: "He is a developer"
+        }
+    ]
 
-    const challenge = {
-        words: ["developer", "is", "He", "a"],
-        correct: "He is a developer"
-    };
+    challenge.forEach(c => {
+        console.log("Reorder the words to form a sentence: ");
+        // join une os itens do array em uma única string, separados
+        // pelo(s) caractere(s) que informarmos
+        console.log(c.words.join(" | ")) // "developer | is | He | a"
 
-    console.log("\nReorder the words to form a sentence:");
-    console.log(challenge.words.join(" | "));
+        let answer = readline.question("Write the sentence in the right order: ")
 
-    let answer = readline.question("Sentence: ");
+        if (answer === c.answer) {
+            console.log("Correct!");
+            gameState.addScore(10);
+        } else {
+            console.log(`Wrong! The right answer is '${c.answer}'`);
+            gameState.loseLife();
+        }
 
-    if(answer === challenge.correct) {
-        console.log("Correct!");
-        gameState.addScore(15);
-    } else {
-        console.log("Wrong! Correct sentence:", challenge.correct);
-        gameState.loseLife();
-    }
-
-    readline.question("\nPress ENTER to continue...");
+    })
 }
 
-module.exports = sentenceBuilder;
+module.exports = sentenceBuilder
 ```
 
 ---
@@ -390,34 +400,43 @@ module.exports = sentenceBuilder;
 # 12. games/memoryChallenge.js
 
 ```js
-const readline = require('readline-sync');
-const gameState = require('../gameState');
+const readline = require("readline-sync");
+const gameState = require("../gameState");
 
 function memoryChallenge() {
+  const words = [
+    ["code", "debug", "function", "variable"],
+    ["console", "terminal", "while", "switch"]
+];
 
-    const words = ["code", "debug", "function", "variable"];
 
-    console.log("\nMemorize these words:");
-    console.log(words.join(", "));
 
-    readline.question("\nPress ENTER when ready...");
+  words.forEach(w => {
+    console.log("Memorize these words: ");
+    console.log(w.join(" | "));
+
+    readline.question("\nPress ENTER when you are ready!");
 
     console.clear();
 
-    let answer = readline.question("Type the words separated by comma: ");
+    let answer = readline.question(
+      "Write the words you remember separated by comma:"
+    );
 
-    if(answer === words.join(", ")) {
-        console.log("Perfect memory!");
-        gameState.addScore(20);
+    
+
+    if (answer === w.join(", ")) {
+      console.log("Correct!");
+      gameState.addPoints(10);
     } else {
-        console.log("Not quite!");
-        gameState.loseLife();
+      console.log(`Wrong! The right answer is '${w.join(", ")}'`);
+      gameState.loseLife();
     }
-
-    readline.question("\nPress ENTER to continue...");
+  });
 }
 
 module.exports = memoryChallenge;
+
 ```
 
 ---
