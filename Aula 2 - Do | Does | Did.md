@@ -52,10 +52,10 @@ Exemplos:
   Desenvolvedores realmente testam suas aplicações.
 
 * She **does** maintain the database.
-  Ela mantém o banco de dados.
+  Ela realmente mantém o banco de dados.
 
 * The system **does** process requests.
-  O sistema processa requisições.
+  O sistema realmente processa requisições.
 
 ---
 
