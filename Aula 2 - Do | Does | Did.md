@@ -1,4 +1,4 @@
-# Inglês para Desenvolvedores — DO / DOES / DID
+# DO / DOES / DID
 
 ## 1. Introdução
 
