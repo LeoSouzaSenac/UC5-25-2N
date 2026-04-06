@@ -266,6 +266,3 @@ Alguns verbos mudam de sentido:
 
 ---
 
-
-Se quiser dar um próximo salto forte, o ideal agora é:
-👉 misturar **Simple Present + Present Continuous em exercícios comparativos** (isso fixa de verdade).
